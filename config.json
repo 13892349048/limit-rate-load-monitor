@@ -1,0 +1,50 @@
+{
+  "monitor": {
+    "monitor_interval": "5s",
+    "adjust_interval": "10s",
+    "enable_cpu": true,
+    "enable_memory": true,
+    "enable_rt": true,
+    "enable_error": true
+  },
+  "rate_limit": {
+    "base_limit": 1000,
+    "current_limit": 1000,
+    "min_limit": 100,
+    "max_limit": 5000,
+    "adjust_factor": 1
+  },
+  "threshold": {
+    "cpu_high": 70,
+    "cpu_critical": 85,
+    "mem_high": 80,
+    "mem_critical": 90,
+    "rt_high": 100,
+    "rt_critical": 300,
+    "error_high": 5,
+    "error_critical": 10
+  },
+  "server": {
+    "port": 8080,
+    "host": "0.0.0.0",
+    "read_timeout": "30s",
+    "write_timeout": "30s",
+    "enable_http": true,
+    "enable_grpc": false
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "output": "stdout",
+    "max_size": 100,
+    "max_backups": 3,
+    "max_age": 7
+  },
+  "metrics": {
+    "enable_prometheus": true,
+    "prometheus_port": 9090,
+    "metrics_path": "/metrics",
+    "enable_pprof": true,
+    "pprof_port": 6060
+  }
+}
